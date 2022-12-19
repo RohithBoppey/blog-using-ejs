@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Form to Update a Blog: <br><br>
+    <form action="/blog/update/<%= blog._id %> " method="POST">
+        <label>Name of the Blog</label>
+        <input type="text" name="name" id="name" value = "<%= blog.title %>" ><br>
+        <label>Content of the Blog</label>
+        <textarea id="body" name = "body" value = "<%= blog.body %>" ></textarea><br><br>
+        <label>Author of the Blog</label>
+        <input type="text" id="author" name="author" value = "<%= blog.author %>" <br><br>
+        <input type="submit" name = "Update"></input>
+    </form>
+
+</body>
+
+</html>
